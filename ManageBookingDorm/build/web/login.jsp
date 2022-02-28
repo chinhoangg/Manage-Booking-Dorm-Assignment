@@ -26,7 +26,7 @@
         <h1 class="w3ls">Manage Booking Dorm</h1>
         <div class="content-w3ls">
             <div class="content-agile1">
-                <h2 class="agileits1">Dorm</h2>
+                <h2 class="agileits1">DormBOO</h2>
                 <p class="agileits2">Here you can book the right dorm for you.</p>
             </div>
             <div class="content-agile2">
