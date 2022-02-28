@@ -30,7 +30,7 @@
                 <p class="agileits2">Here you can book the right dorm for you.</p>
             </div>
             <div class="content-agile2">
-                <form action="#" method="post">
+                <form action="login" method="POST">
                     <div class="form-control w3layouts"> 
                         <input type="text" id="firstname" name="username" placeholder="User Name" title="Please enter your User Name" required="">
                     </div>
