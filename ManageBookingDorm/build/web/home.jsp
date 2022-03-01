@@ -68,10 +68,10 @@
                     <small>+84 89 826 8621</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/chinhoangg01.dp.ITfpt/"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href="https://www.instagram.com/chinhoangg_/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -90,15 +90,14 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="home.jsp" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="about.jsp" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="#" class="dropdown-item">Feature</a>
+                        <a href="quote.jsp" class="dropdown-item">Free Quote</a>
+                        <a href="#" class="dropdown-item">Testimonial</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -113,7 +112,7 @@
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                <img class="img-fluid" src="img/car-1.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -128,7 +127,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                <img class="img-fluid" src="img/car-2.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -143,7 +142,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+                <img class="img-fluid" src="img/car-3.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -173,7 +172,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">01</h1>
                     </div>
-                    <h5>Creative Designers</h5>
+                    <h5>Widely</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -182,7 +181,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">02</h1>
                     </div>
-                    <h5>Quality Products</h5>
+                    <h5>Clean</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -191,7 +190,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">03</h1>
                     </div>
-                    <h5>Free Consultation</h5>
+                    <h5>Convenient</h5>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -200,7 +199,7 @@
                         </div>
                         <h1 class="display-1 text-light mb-0">04</h1>
                     </div>
-                    <h5>Customer Support</h5>
+                    <h5>Happy</h5>
                 </div>
             </div>
         </div>
@@ -215,7 +214,7 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/abou.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -223,7 +222,7 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">About Us</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">We are students of FPT University who have been implementing projects and projects on sales and management software. DormBOO is my project on this project. Hope everyone experiences and comments.</p>
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
@@ -231,7 +230,7 @@
                                         <i class="fa fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">8888</h2>
                                         <p class="fw-medium mb-0">Happy Clients</p>
                                     </div>
                                 </div>
@@ -242,13 +241,13 @@
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up">1</h2>
                                         <p class="fw-medium mb-0">Projects Done</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary py-3 px-5">Explore More</a>
+                        <a href="about.jsp" class="btn btn-primary py-3 px-5">Explore More</a>
                     </div>
                 </div>
             </div>
@@ -349,9 +348,9 @@
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Why Choose Us</h1>
+                            <h1 class="display-5 mb-4">Why Should Use Dormitory?</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">Coming to us, students will have a spacious, airy and extremely fully equipped living space. With beautiful decoration and many trees, here students will have a cool and fresh study space.</p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
@@ -359,7 +358,7 @@
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Quality</p>
+                                        <p class="mb-2">Convenient</p>
                                         <h5 class="mb-0">Services</h5>
                                     </div>
                                 </div>
@@ -370,8 +369,8 @@
                                         <i class="fa fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Creative</p>
-                                        <h5 class="mb-0">Designers</h5>
+                                        <p class="mb-2">Widely</p>
+                                        <h5 class="mb-0">Spatial</h5>
                                     </div>
                                 </div>
                             </div>
@@ -381,8 +380,8 @@
                                         <i class="fa fa-drafting-compass fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Free</p>
-                                        <h5 class="mb-0">Consultation</h5>
+                                        <p class="mb-2">Happy</p>
+                                        <h5 class="mb-0">Students</h5>
                                     </div>
                                 </div>
                             </div>
@@ -392,8 +391,8 @@
                                         <i class="fa fa-headphones fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Customer</p>
-                                        <h5 class="mb-0">Support</h5>
+                                        <p class="mb-2">Parents</p>
+                                        <h5 class="mb-0">Assured</h5>
                                     </div>
                                 </div>
                             </div>
@@ -402,7 +401,7 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feat.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
@@ -572,84 +571,6 @@
     </div>
     <!-- Quote End -->
 
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Team Members</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -698,7 +619,7 @@
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>chinhhoangto@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/chinhoangg01.dp.ITfpt/"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
