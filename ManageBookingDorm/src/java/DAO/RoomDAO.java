@@ -96,6 +96,31 @@ public class RoomDAO {
         return list;
     }
     
+    public Room getProductById(int productId) {
+        try {
+            String sql = "select *  from Room where id = ?";
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, productId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Room product = Room.builder()
+                        .id(rs.getInt(1))
+                        .name(rs.getString(2))
+                        .duration(rs.getInt(3))
+                        .price(rs.getDouble(4))
+                        .description(rs.getString(5))
+                        .imageUrl(rs.getString(6))
+                        .createdDate(rs.getString(7))
+                        .categoryId(rs.getInt(8)).build();
+                return product;
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
     public int getTotalProducts() {
         try {
             String sql = "select count(id)  from Room ";
