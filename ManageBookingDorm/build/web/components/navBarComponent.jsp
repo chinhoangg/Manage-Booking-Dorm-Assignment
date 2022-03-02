@@ -54,7 +54,7 @@
             </a>
         </div>
     </div>
-    <a href="login.jsp" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
+    <a href="login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
 </div>
 </nav>
 <!-- Navbar End -->

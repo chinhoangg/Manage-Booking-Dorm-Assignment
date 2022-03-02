@@ -97,12 +97,12 @@
                     <div class="dropdown-menu fade-up m-0">
                         <a href="feature.html" class="dropdown-item">Feature</a>
                         <a href="quote.jsp" class="dropdown-item">Free Quote</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="testimonial.html" class="dropdown-item">Feedback</a>
                     </div>
                 </div>
                 <a href="#" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="login.jsp" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
