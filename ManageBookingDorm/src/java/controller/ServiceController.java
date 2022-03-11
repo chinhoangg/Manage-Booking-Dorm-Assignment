@@ -47,7 +47,7 @@ public class ServiceController extends HttpServlet {
         }
 
         RoomDAO roomDAO = new RoomDAO();
-        List<Room> listProducts = roomDAO.getProductsWithPagging(page, PAGE_SIZE);
+        List<Room> listProducts = roomDAO.getAllProducts();
         int totalProducts = roomDAO.getTotalProducts();
         int totalPage = totalProducts / PAGE_SIZE;
         if (totalProducts % PAGE_SIZE != 0) {

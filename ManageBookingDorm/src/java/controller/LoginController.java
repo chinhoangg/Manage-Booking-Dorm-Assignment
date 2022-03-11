@@ -5,12 +5,15 @@
  */
 package controller;
 
+import DAO.AccountDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Account;
 
 /**
  *
@@ -31,16 +34,6 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
         }
     }
 
@@ -56,6 +49,30 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //kiểm tra cookie
+        Cookie[] cookies = request.getCookies();
+        String username = null;
+        String password = null;
+        for (Cookie cooky : cookies) {
+            if (cooky.getName().equals("username")) {
+                username = cooky.getValue();
+            }
+            if (cooky.getName().equals("password")) {
+                password = cooky.getValue();
+            }
+            if (username != null && password != null) {
+                break;
+            }
+        }
+
+        if (username != null && password != null) {
+            Account account = new AccountDAO().login(username, password);
+            if (account != null) { //cookie hợp lệ
+                request.getSession().setAttribute("account", account);
+                response.sendRedirect("home");
+                return;
+            }
+        }
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
@@ -70,7 +87,31 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //Check login
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        boolean remember = request.getParameter("remember") != null;
+
+        // check username, password
+        Account account = new AccountDAO().login(username, password);
+
+        if (account != null) { //hop le -> luu len session
+            //remember
+            if (remember) {
+                Cookie usernameCookie = new Cookie("username", username);
+                usernameCookie.setMaxAge(60 * 60 * 24 * 2);
+                Cookie passwordCookie = new Cookie("password", password);
+                passwordCookie.setMaxAge(60 * 60 * 24 * 2);
+                response.addCookie(usernameCookie);
+                response.addCookie(passwordCookie);
+            }
+            request.getSession().setAttribute("account", account);
+            response.sendRedirect("home");
+            //khong remember
+        } else {      //khong hop le --> tra ve loi
+            request.setAttribute("error", "Username or password incorrect");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
     }
 
     /**

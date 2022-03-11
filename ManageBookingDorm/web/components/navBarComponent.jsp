@@ -4,6 +4,7 @@
     Author     : chinhoag
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- Topbar Start -->
 <div class="container-fluid bg-light p-0">
@@ -45,16 +46,25 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <form action="search" class="d-flex mx-auto">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-dark text-primary" type="submit">Search</button>
         </form>
         <div class="d-flex my-2">
             <a class="btn btn-outline-dark" style="margin-right: 10px" href="carts">
-                <i class="bi-cart-fill me-1"></i>Room
+                <i class="bi-cart-fill me-1 text-primary"></i>Room
                 <span class="badge bg-dark text-white ms-1 rounded-pill">${sessionScope.carts.size()}</span>
             </a>
         </div>
     </div>
-    <a href="login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
+    <c:choose>
+        <c:when test="${sessionScope.account != null}">
+            <button class="btn btn-primary py-2 px-lg-3 d-none d-lg-block">${sessionScope.account.displayName}</button>
+            <a href="logout" class="btn py-4 px-lg-3 d-none d-lg-block text-primary">SIGN OUT</a>
+        </c:when>
+        <c:otherwise>
+            <a href="login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
+        </c:otherwise>
+    </c:choose>
+    
 </div>
 </nav>
 <!-- Navbar End -->

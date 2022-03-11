@@ -39,6 +39,7 @@
                     <h1 class="display-4 fw-bolder" style="color: white">Service - Booking in DormBOO</h1>
                     <p class="lead fw-normal text-white-50 mb-0">
                         The place for your choice
+                        </br><a href="service">Service</a>
                     </p>
                 </div>
             </div>
@@ -56,23 +57,7 @@
                         </ul>
                     </div>
                     <div class="col-md-9">
-                        <h3>List Rooms</h3>
-                        <c:choose>
-                            <c:when test="${listProducts==null || listProducts.size()==0}">
-                                Not founds
-                            </c:when>
-                            <c:otherwise>
-                                <nav aria-label="Page navigation example" class="d-flex justify-content-center">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="home?page=${page-1}">Previous</a></li>
-                                            <c:forEach begin="1" end="${totalPage}" var="i">
-                                            <li class="page-item ${i == page?"active":""}"><a class="page-link" href="home?page=${i}">${i}</a></li>
-                                            </c:forEach>
-                                        <li class="page-item"><a class="page-link" href="home?page=${page+1}">Next</a></li>
-                                    </ul>
-                                </nav>
-                            </c:otherwise>
-                        </c:choose>
+                        <h3 style="text-align: center">Student Dorm Here</h3>
                         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 justify-content-center">
                             <c:forEach items="${listProducts}" var="P">
                                 <div class="col mb-5">
@@ -114,6 +99,22 @@
                                 </div>
                             </c:forEach>
                         </div>
+                        <c:choose>
+                            <c:when test="${listProducts==null || listProducts.size()==0}">
+                                Not founds
+                            </c:when>
+                            <c:otherwise>
+                                <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="service?page=${page-1}">Previous</a></li>
+                                            <c:forEach begin="1" end="${totalPage}" var="i">
+                                            <li class="page-item ${i == page?"active":""}"><a class="page-link" href="home?page=${i}">${i}</a></li>
+                                            </c:forEach>
+                                        <li class="page-item"><a class="page-link" href="service?page=${page+1}">Next</a></li>
+                                    </ul>
+                                </nav>
+                            </c:otherwise>
+                        </c:choose>
                     </div>
                 </div>
             </div>

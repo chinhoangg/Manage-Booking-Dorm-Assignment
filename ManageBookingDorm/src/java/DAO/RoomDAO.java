@@ -67,6 +67,32 @@ public class RoomDAO {
         return list;
     }
     
+    public List<Room> search(String keyword) {
+        List<Room> list = new ArrayList<>();
+        try {
+            String sql = "select *  from Room where name like ?";
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + keyword + "%");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Room product = Room.builder()
+                        .id(rs.getInt(1))
+                        .name(rs.getString(2))
+                        .duration(rs.getInt(3))
+                        .price(rs.getDouble(4))
+                        .description(rs.getString(5))
+                        .imageUrl(rs.getString(6))
+                        .createdDate(rs.getString(7))
+                        .categoryId(rs.getInt(8)).build();
+                list.add(product);
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
+    
     public List<Room> getProductsWithPagging(int page, int PAGE_SIZE) {
         List<Room> list = new ArrayList<>();
         try {

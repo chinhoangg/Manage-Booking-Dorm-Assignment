@@ -142,6 +142,8 @@ insert into Room (id, name, duration, price, description, image_url, created_dat
 insert into Room (id, name, duration, price, description, image_url, created_date, category_id) values (8, 'Erskine', 9, 125, 'Spacious room, can accommodate 6 students, area with classic and cozy decoration.', 'https://media.viezone.vn/prod/2021/10/3/image_e8ec755c91.png', '2021-10-29', 4);
 insert into Room (id, name, duration, price, description, image_url, created_date, category_id) values (9, 'Marge', 8, 152, 'Room type higher level with harmonious decoration, clean. Usually book by students far from home.', 'https://alibabahome.vn/wp-content/uploads/2019/01/ky-tuc-xa-cao-cap-nu-hcm.jpg', '2021-09-19', 2);
 insert into Room (id, name, duration, price, description, image_url, created_date, category_id) values (10, 'Reyna', 3, 155, 'The room is spacious and full of convenient equipment to help students study more conveniently.', 'https://s3.ap-southeast-1.amazonaws.com/users.meeyland/articles/20190504180737_adfe.1621166687063.jpg?d=414x188', '2021-03-10', 2);
+insert into Room (id, name, duration, price, description, image_url, created_date, category_id) values (11, 'Tokyo', 3, 175, 'Room type with classical decoration, helping students to comfortably study and practice.', 'https://ss-images.saostar.vn/w800/2018/11/22/4106539/img_0687-1.jpg', '2021-01-11', 1);
+insert into Room (id, name, duration, price, description, image_url, created_date, category_id) values (12, 'Sysdei', 6, 110, 'A room with a capacity of 8 people but very airy. Here students can do what they dream of.', 'https://cafebiz.cafebizcdn.vn/2017/photo-1-1505131731090.jpg', '2022-02-15', 5);
 GO
 
 SET IDENTITY_INSERT [dbo].[Room] OFF

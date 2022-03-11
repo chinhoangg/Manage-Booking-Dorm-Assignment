@@ -4,6 +4,7 @@
     Author     : chinhoag
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,6 +22,13 @@
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
         <!-- /css -->
+        <style>
+            .error{
+                margin-left: 150px;
+                margin-top: 20px;
+                color: red
+            }
+        </style>
     </head>
     <body>
         <h1 class="w3ls">Manage Booking Dorm</h1>
@@ -35,14 +43,17 @@
                         <input type="text" id="firstname" name="username" placeholder="User Name" title="Please enter your User Name" required="">
                     </div>
 
-                    <div class="form-control w3layouts">	
-                        <input type="email" id="email" name="email" placeholder="mail@example.com" title="Please enter a valid email" required="">
-                    </div>
-
                     <div class="form-control agileinfo">	
                         <input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
                     </div>
-			
+
+                    <div style="margin-left: 190px">	
+                        <input type="checkbox" name="remember">
+                        <label style="color: white">Remember me</label>
+                    </div>
+
+                    <h3 class="error">${error}</h3>
+
                     <input type="submit" class="register" value="Login">
                 </form>
                 <script type="text/javascript">

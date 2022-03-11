@@ -4,6 +4,7 @@
     Author     : chinhoag
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,19 +91,26 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="home" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="about" class="nav-item nav-link">About</a>
                     <a href="service" class="nav-item nav-link">Service</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu fade-up m-0">
-                            <a href="feature.html" class="dropdown-item">Feature</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
-                            <a href="testimonial.html" class="dropdown-item">Feedback</a>
+                            <a href="#" class="dropdown-item">Feature</a>
+                            <a href="quote" class="dropdown-item">Free Quote</a>
                         </div>
                     </div>
                     <a href="#" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
+                <c:choose>
+                    <c:when test="${sessionScope.account != null}">
+                        <button class="btn btn-primary py-2 px-lg-3 d-none d-lg-block">${sessionScope.account.displayName}</button>
+                        <a href="logout" class="btn py-4 px-lg-3 d-none d-lg-block text-primary">SIGN OUT</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">SIGN UP<i class="fa fa-arrow-right ms-3"></i></a>
+                    </c:otherwise>
+                </c:choose>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -114,7 +122,7 @@
                 <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="text-white" href="home.jsp">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="home">Home</a></li>
                         <li class="breadcrumb-item text-white active" aria-current="page">About</li>
                     </ol>
                 </nav>
