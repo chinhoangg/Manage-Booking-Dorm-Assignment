@@ -23,6 +23,7 @@ CREATE TABLE [dbo].[Account](
 	[address] [nvarchar](255) NULL,
 	[email] [nvarchar](255) NULL,
 	[phone] [nvarchar](255) NULL,
+	[role] [nvarchar](50) NULL,
  CONSTRAINT [PK_Account] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
