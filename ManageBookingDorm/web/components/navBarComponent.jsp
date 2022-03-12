@@ -50,7 +50,7 @@
         </form>
         <div class="d-flex my-2">
             <a class="btn btn-outline-dark" style="margin-right: 10px" href="carts">
-                <i class="bi-cart-fill me-1 text-primary"></i>Room
+                <i class="bi-star-fill me-2 text-primary"></i>Room
                 <span class="badge bg-dark text-white ms-1 rounded-pill">${sessionScope.carts.size()}</span>
             </a>
         </div>

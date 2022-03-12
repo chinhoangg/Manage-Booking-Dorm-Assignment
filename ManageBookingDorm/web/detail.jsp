@@ -36,7 +36,7 @@
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="${product.imageUrl}" alt="..." /></div>
                     <div class="col-md-6">
-                        <div class="small mb-1">New Room</div>
+                        <a href="service" class="small mb-1">Back to Service</a>
                         <h1 class="display-5 fw-bolder">${product.name}</h1>
                         <div class="fs-5 mb-5">
                             <span class="text-decoration-line-through">$180.00</span>
@@ -44,11 +44,7 @@
                         </div>
                         <p class="lead">${product.description}</p>
                         <div class="d-flex">
-                            <a href="add-to-cart?productId=${product.id}" class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to Room
-                            </a>
-                            <a class="btn btn-outline-success flex-shrink-0 ms-2" type="button">
+                            <a href="add-to-cart?productId=${product.id}" class="btn btn-outline-success flex-shrink-0 ms-2" type="button">
                                 <i class="bi-cart-fill me-1"></i>
                                 Booking now
                             </a>

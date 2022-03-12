@@ -71,7 +71,7 @@
                         //empty string means no validation error
                     }
                 </script>
-                <p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>
+                <p class="wthree w3l">Quick Login and Come To DormBOO</p>
                 <ul class="social-agileinfo wthree2">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-youtube"></i></a></li>

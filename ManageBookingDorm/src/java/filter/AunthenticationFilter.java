@@ -24,7 +24,7 @@ import model.Account;
  *
  * @author chinhoag
  */
-@WebFilter(filterName = "AunthenticationFilter", urlPatterns = {"/service"})
+@WebFilter(filterName = "AunthenticationFilter", urlPatterns = {"/service", "/quote"})
 public class AunthenticationFilter implements Filter {
     
     @Override
@@ -35,7 +35,7 @@ public class AunthenticationFilter implements Filter {
         HttpServletResponse res = (HttpServletResponse) response;
 
         HttpSession session = req.getSession();
-        //Kiểm tra đăng nhập
+        //Kiem tra login
         Account account = (Account) session.getAttribute("account");
 
         if (account != null) {
@@ -43,7 +43,7 @@ public class AunthenticationFilter implements Filter {
             chain.doFilter(request, response);
         } else {
             //check cookie
-            //kiểm tra cookie
+            //kiem tra cookie
             Cookie[] cookies = req.getCookies();
             String username = null;
             String password = null;
@@ -61,7 +61,7 @@ public class AunthenticationFilter implements Filter {
 
             if (username != null && password != null) {
                 Account accountLogin = new AccountDAO().login(username, password);
-                if (account != null) { //cookie hợp lệ
+                if (account != null) { //cookie hop le
                     session.setAttribute("account", account);
                     chain.doFilter(request, response);
                     return;

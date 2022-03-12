@@ -38,7 +38,7 @@
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder" style="color: white">Service - Booking in DormBOO</h1>
                     <p class="lead fw-normal text-white-50 mb-0">
-                        The place for your choice
+                        The top choice of Students
                         </br><a href="service">Service</a>
                     </p>
                 </div>
@@ -49,11 +49,11 @@
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row">
                     <div class="col-md-3 mb-5">
-                        <h3>List Categories</h3>
+                        <h3 style="text-align: center">Kind of Room</h3>
                         <ul class="list-group">
                             <c:forEach items="${sessionScope.listCategories}" var="C">
                                 <li class="list-group-item"><a href="filter-category?categoryId=${C.id}">${C.name}</a></li>
-                                </c:forEach>
+                            </c:forEach>
                         </ul>
                     </div>
                     <div class="col-md-9">
@@ -61,7 +61,6 @@
                         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 justify-content-center">
                             <c:forEach items="${listProducts}" var="P">
                                 <div class="col mb-5">
-                                    ${P.id}
                                     <div class="card h-100">
                                         <!-- Sale badge-->
                                         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">

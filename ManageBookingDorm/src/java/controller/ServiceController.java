@@ -56,7 +56,7 @@ public class ServiceController extends HttpServlet {
         request.setAttribute("page", page);
         request.setAttribute("totalPage", totalPage);
         request.setAttribute("listProducts", listProducts);
-        session.setAttribute("urlHistory", "home"); 
+        session.setAttribute("urlHistory", "service"); 
 
         request.getRequestDispatcher("service.jsp").forward(request, response);
     }

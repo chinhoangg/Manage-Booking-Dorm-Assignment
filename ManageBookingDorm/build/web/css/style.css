@@ -135,7 +135,7 @@ p.agileits2 {
     text-transform: capitalize;
 }
 .content-w3ls .content-agile2 {
-	width: 50%;
+    width: 50%;
     float: left;
     padding: 25px 0 0;
 }
@@ -159,7 +159,7 @@ input#firstname,input#email,input#password1,input#password2 {
 }
 input#firstname:focus,input#email:focus,input#password1:focus,input#password2:focus,input#firstname:hover,input#email:hover,input#password1:hover,input#password2:hover {
 	color:#fff;
-	border-bottom:5px solid #3970b0;
+	border-bottom:5px solid #e7592d;
 }
 input::-webkit-input-placeholder {
 color: #fff !important;
@@ -174,16 +174,16 @@ input:-ms-input-placeholder {
 color: #fff !important;  
 }
 input:hover::-webkit-input-placeholder {
-color: #3970b0 !important;
+color: #e7592d !important;
 } 
 input:hover:-moz-placeholder { /* Firefox 18- */
-color:	#3970b0 !important;  
+color:	#e7592d !important;  
 } 
 input:hover::-moz-placeholder {  /* Firefox 19+ */
-color: #3970b0 !important;  
+color: #e7592d !important;  
 } 
 input:hover:-ms-input-placeholder {  
-color: #3970b0 !important;  
+color: #e7592d !important;  
 }
 input.register {
     width: 335px;
@@ -194,7 +194,7 @@ input.register {
     font-size: 17px;
     font-weight: normal;
     color: #fff;
-    background-color:#3970b0;
+    background-color:#e7592d;
     border-color: transparent;
 	font-family: 'Raleway', sans-serif;
 	/*-- w3ls --*/
@@ -207,7 +207,7 @@ input.register {
 }
 input.register:hover {
 	color: #fff;
-    background-color:#3970b0;
+    background-color:#e7592d;
 }
 p.wthree {
     font-size: 16px;

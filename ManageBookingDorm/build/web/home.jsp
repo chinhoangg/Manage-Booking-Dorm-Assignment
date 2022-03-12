@@ -415,7 +415,7 @@
                     <div class="testimonial-item text-center">
                         <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/fitback-3.jpg" style="width: 90px; height: 90px;">
                         <div class="testimonial-text text-center p-4">
-                            <p>"Mặc dù mình ở gần trường, nhưng vì quá trình học với thời gian không đều, nên chính vì thế mình đã tìm được ký túc xá tiện nghi nhờ Dorm."</p>
+                            <p>"Mặc dù mình ở gần trường, nhưng vì quá trình học với thời gian không đều, nên chính vì thế mình đã tìm được ký túc xá tiện nghi nhờ DormBOO."</p>
                             <h5 class="mb-1">Thanh Phan</h5>
                             <span class="fst-italic">FPT Student</span>
                         </div>

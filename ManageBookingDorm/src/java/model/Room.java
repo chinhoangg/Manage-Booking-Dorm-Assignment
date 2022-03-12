@@ -18,7 +18,7 @@ import lombok.ToString;
 public class Room {
     private int id;
     private String name;
-    private int duration;
+    private int duration;     //thoi gian sinh vien dc o toi da trong 1 lan book
     private double price;
     private String description;
     private String imageUrl;
