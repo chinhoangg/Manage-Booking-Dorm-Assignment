@@ -24,7 +24,7 @@ import model.Account;
  *
  * @author chinhoag
  */
-@WebFilter(filterName = "AunthenticationFilter", urlPatterns = {"/service", "/quote"})
+@WebFilter(filterName = "AunthenticationFilter", urlPatterns = {"/service", "/quote", "/admin/*"})
 public class AunthenticationFilter implements Filter {
     
     @Override

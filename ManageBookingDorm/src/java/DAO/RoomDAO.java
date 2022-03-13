@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Admissier;
 import model.Room;
 
 /**
@@ -93,35 +94,6 @@ public class RoomDAO {
         return list;
     }
     
-    public List<Room> getProductsWithPagging(int page, int PAGE_SIZE) {
-        List<Room> list = new ArrayList<>();
-        try {
-            String sql = "select *  from Room order by id\n"
-                    + "offset (?-1)*? row fetch next ? rows only";
-            Connection conn = new DBContext().getConnection();
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1, page);
-            ps.setInt(2, PAGE_SIZE);
-            ps.setInt(3, PAGE_SIZE);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                Room product = Room.builder()
-                        .id(rs.getInt(1))
-                        .name(rs.getString(2))
-                        .duration(rs.getInt(3))
-                        .price(rs.getDouble(4))
-                        .description(rs.getString(5))
-                        .imageUrl(rs.getString(6))
-                        .createdDate(rs.getString(7))
-                        .categoryId(rs.getInt(8)).build();
-                list.add(product);
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return list;
-    }
-    
     public Room getProductById(int productId) {
         try {
             String sql = "select *  from Room where id = ?";
@@ -160,5 +132,59 @@ public class RoomDAO {
             Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return 0;
+    }
+    
+    public List<Admissier> getAllAdmissier() {
+        List<Admissier> list = new ArrayList<>();
+        try {
+            String sql = "select * from Admissier";
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Admissier ad = Admissier.builder()
+                        .id(rs.getInt(1))
+                        .name(rs.getString(2))
+                        .phone(rs.getString(3))
+                        .address(rs.getString(4)).build();
+                list.add(ad);
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
+    
+    
+    
+    
+    
+    public List<Room> getProductsWithPagging(int page, int PAGE_SIZE) {
+        List<Room> list = new ArrayList<>();
+        try {
+            String sql = "select *  from Room order by id\n"
+                    + "offset (?-1)*? row fetch next ? rows only";
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, page);
+            ps.setInt(2, PAGE_SIZE);
+            ps.setInt(3, PAGE_SIZE);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Room product = Room.builder()
+                        .id(rs.getInt(1))
+                        .name(rs.getString(2))
+                        .duration(rs.getInt(3))
+                        .price(rs.getDouble(4))
+                        .description(rs.getString(5))
+                        .imageUrl(rs.getString(6))
+                        .createdDate(rs.getString(7))
+                        .categoryId(rs.getInt(8)).build();
+                list.add(product);
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
     }
 }

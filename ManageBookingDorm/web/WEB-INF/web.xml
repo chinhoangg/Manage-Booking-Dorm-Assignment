@@ -64,6 +64,10 @@
         <servlet-name>ThanksQuoteController</servlet-name>
         <servlet-class>controller.ThanksQuoteController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>controller.AdminController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -128,6 +132,18 @@
         <servlet-name>ThanksQuoteController</servlet-name>
         <url-pattern>/tksquote</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/admin/totalstudent</url-pattern>
+    </servlet-mapping>
+    <filter-mapping>
+        <filter-name>AunthenticationFilter</filter-name>
+        <url-pattern/>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthorizationFilter</filter-name>
+        <url-pattern/>
+    </filter-mapping>
     <session-config>
         <session-timeout>
             30

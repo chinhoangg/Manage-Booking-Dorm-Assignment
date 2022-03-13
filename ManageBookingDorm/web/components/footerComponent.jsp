@@ -39,10 +39,10 @@
                         <a class="btn btn-link" href="">Support</a>
                     </div>
             <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">News letter</h4>
+                <h4 class="text-light mb-4">Permission</h4>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
                     <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your name">
-                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    <a href="admin/totalstudent" type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Admin</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+<script src="/ManageBookingDorm/js/scripts.js"></script>
 <!-- Favicon -->
 <link href="img/favicon.ico" rel="icon">
 
@@ -80,12 +80,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 <!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<link href="/ManageBookingDorm/lib/animate/animate.min.css" rel="stylesheet">
+<link href="/ManageBookingDorm/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="/ManageBookingDorm/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
 <!-- Customized Bootstrap Stylesheet -->
-<link href="css1/bootstrap.min.css" rel="stylesheet">
+<link href="/ManageBookingDorm/css1/bootstrap.min.css" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="css1/style.css" rel="stylesheet">
+<link href="/ManageBookingDorm/css1/style.css" rel="stylesheet">

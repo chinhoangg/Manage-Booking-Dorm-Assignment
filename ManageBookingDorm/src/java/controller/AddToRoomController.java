@@ -46,10 +46,10 @@ public class AddToRoomController extends HttpServlet {
                 carts = new LinkedHashMap<>();
             }
 
-            if (carts.containsKey(productId)) {//sản phẩm đã có trên giỏ hàng
+            if (carts.containsKey(productId)) {     //phòng đã dc book
                 int oldQuantity = carts.get(productId).getDuration();
                 carts.get(productId).setDuration(oldQuantity + 1);
-            } else {//sản phẩm chưa có trên giỏ hàng
+            } else {                                //phòng chưa dc book
                 Room product = new RoomDAO().getProductById(productId);
                 carts.put(productId, Cart.builder().product(product).duration(1).build());
             }
