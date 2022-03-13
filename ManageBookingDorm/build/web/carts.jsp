@@ -37,11 +37,11 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
+                                    <th scope="col">Room Name</th>
                                     <th scope="col">Image</th>
-                                    <th scope="col">Price</th>
+                                    <th scope="col">Price ($)</th>
                                     <th scope="col">Duration (Monthly)</th>
-                                    <th scope="col">Total Price</th>
+                                    <th scope="col">Total Price ($)</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -63,7 +63,7 @@
                             </tbody>
                         </table>
                         <h3>Total Amount: $${totalMoney}</h3>
-                        <a href="checkout" class="btn btn-danger w-25">Check out</a>
+                        <a href="checkout" class="btn btn-danger w-25">Payment</a>
                     </c:otherwise>
                 </c:choose>
             </div>

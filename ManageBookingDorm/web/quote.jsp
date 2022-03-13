@@ -146,22 +146,22 @@
                                 <h1 class="display-5 mb-4">Free Quote</h1>
                             </div>
                             <p class="mb-4 pb-2">So happy you came to DormBOO's Quote. Surely you have questions about us. Let’s fill out information and ask questions here. We will respond to you as soon as possible.</p>
-                            <form>
+                            <form action="checkout" method="POST">
                                 <div class="row g-3">
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                        <input type="text" class="form-control border-0" name="name" placeholder="Your Name" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                        <input type="email" class="form-control border-0" name="email" placeholder="Your Email" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control border-0" placeholder="Your Phone" style="height: 55px;">
+                                        <input type="text" class="form-control border-0" name="phone" placeholder="Your Phone" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control border-0" placeholder="Your Address" style="height: 55px;">
+                                        <input type="text" class="form-control border-0" name="address" placeholder="Your Address" style="height: 55px;">
                                     </div>
                                     <div class="col-12">
-                                        <textarea class="form-control border-0" placeholder="Special Note"></textarea>
+                                        <textarea class="form-control border-0" name="note" placeholder="Special Note"></textarea>
                                     </div>
                                     <div class="col-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">SEND FOR ME</button>

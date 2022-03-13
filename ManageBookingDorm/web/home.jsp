@@ -441,22 +441,22 @@
                                 <h1 class="display-5 mb-4">Free Quote</h1>
                             </div>
                             <p class="mb-4 pb-2">So happy you came to DormBOO's Quote. Surely you have questions about us. Let’s fill out information and ask questions here. We will respond to you as soon as possible.</p>
-                            <form>
+                            <form action="checkout" method="POST">
                                 <div class="row g-3">
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                        <input type="text" class="form-control border-0" name="name" placeholder="Your Name" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                        <input type="email" class="form-control border-0" name="email" placeholder="Your Email" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control border-0" placeholder="Your Phone" style="height: 55px;">
+                                        <input type="text" class="form-control border-0" name="phone" placeholder="Your Phone" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <input type="text" class="form-control border-0" placeholder="Your Address" style="height: 55px;">
+                                        <input type="text" class="form-control border-0" name="address" placeholder="Your Address" style="height: 55px;">
                                     </div>
                                     <div class="col-12">
-                                        <textarea class="form-control border-0" placeholder="Special Note"></textarea>
+                                        <textarea class="form-control border-0" name="note" placeholder="Special Note"></textarea>
                                     </div>
                                     <div class="col-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">SEND FOR ME</button>
@@ -497,14 +497,14 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="text-light mb-4">Quick Links</h4>
-                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="about">About Us</a>
                         <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Our Services</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="service">Our Services</a>
+                        <a class="btn btn-link" href="quote">Free Quote</a>
                         <a class="btn btn-link" href="">Support</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="text-light mb-4">Newsletter</h4>
+                        <h4 class="text-light mb-4">News letter</h4>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your name">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

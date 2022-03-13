@@ -71,7 +71,7 @@
                         //empty string means no validation error
                     }
                 </script>
-                <p class="wthree w3l">Quick Login and Come To DormBOO</p>
+                <p class="wthree w3l">Quick Login and Come To <a href="home" style="color: red">DormBOO</a></p>
                 <ul class="social-agileinfo wthree2">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-youtube"></i></a></li>
@@ -81,6 +81,6 @@
             </div>
             <div class="clear"></div>
         </div>
-        <p class="copyright w3l">© 2022 Signup Dorm. Everything you need is here | Create by <a href="https://www.facebook.com/chinhoangg01.dp.ITfpt/" target="_blank">ChinhHoang</a></p>
+        <p class="copyright w3l" style="color: white">© 2022 Signup Dorm. Everything you need is here | Create by <a href="https://www.facebook.com/chinhoangg01.dp.ITfpt/" target="_blank">ChinhHoang</a></p>
     </body>
 </html>
