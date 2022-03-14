@@ -68,6 +68,22 @@
         <servlet-name>AdminController</servlet-name>
         <servlet-class>controller.AdminController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ManageController</servlet-name>
+        <servlet-class>controller.ManageController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminController2</servlet-name>
+        <servlet-class>controller.AdminController2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminController3</servlet-name>
+        <servlet-class>controller.AdminController3</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddRoomComtroller</servlet-name>
+        <servlet-class>controller.AddRoomComtroller</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -144,6 +160,22 @@
         <filter-name>AuthorizationFilter</filter-name>
         <url-pattern/>
     </filter-mapping>
+    <servlet-mapping>
+        <servlet-name>ManageController</servlet-name>
+        <url-pattern>/admin/manage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController2</servlet-name>
+        <url-pattern>/admin/detailstudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController3</servlet-name>
+        <url-pattern>/admin/notestudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddRoomComtroller</servlet-name>
+        <url-pattern>/admin/createroom</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

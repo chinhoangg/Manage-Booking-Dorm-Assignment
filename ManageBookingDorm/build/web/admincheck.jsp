@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Quote Thanks - DormBOO</title>
+        <title>Manager - DormBOO</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -23,10 +23,12 @@
     </head>
     <body>
         <%@include file="components/navBarComponent.jsp" %>
+        <h1 style="text-align: center">All students have booked in DormBOO</h1><br>
         <div class="container" style="min-height: 1000px">
             <table class="table">
                 <thead>
                     <tr>
+                        <th scope="col">AdmissierID</th>
                         <th scope="col">Name Student</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Address</th>
@@ -35,6 +37,7 @@
                 <tbody>
                     <c:forEach items="${listAdmissier}" var="Ad">
                     <tr>
+                        <td>${Ad.getId()}</td>
                         <td>${Ad.getName()}</td>
                         <td>${Ad.getPhone()}</td>
                         <td>${Ad.getAddress()}</td>

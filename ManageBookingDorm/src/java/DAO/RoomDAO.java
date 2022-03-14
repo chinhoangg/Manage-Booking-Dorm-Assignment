@@ -1,4 +1,3 @@
-
 package DAO;
 
 import context.DBContext;
@@ -10,6 +9,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Admissier;
+import model.Bill;
+import model.BillDetail;
 import model.Room;
 
 /**
@@ -17,6 +18,7 @@ import model.Room;
  * @author chinhoag
  */
 public class RoomDAO {
+
     public List<Room> getAllProducts() {
         List<Room> list = new ArrayList<>();
         try {
@@ -41,7 +43,7 @@ public class RoomDAO {
         }
         return list;
     }
-    
+
     public List<Room> getProductsByCategoryId(int categoryId) {
         List<Room> list = new ArrayList<>();
         try {
@@ -67,7 +69,7 @@ public class RoomDAO {
         }
         return list;
     }
-    
+
     public List<Room> search(String keyword) {
         List<Room> list = new ArrayList<>();
         try {
@@ -93,7 +95,7 @@ public class RoomDAO {
         }
         return list;
     }
-    
+
     public Room getProductById(int productId) {
         try {
             String sql = "select *  from Room where id = ?";
@@ -118,7 +120,7 @@ public class RoomDAO {
         }
         return null;
     }
-    
+
     public int getTotalProducts() {
         try {
             String sql = "select count(id)  from Room ";
@@ -133,7 +135,7 @@ public class RoomDAO {
         }
         return 0;
     }
-    
+
     public List<Admissier> getAllAdmissier() {
         List<Admissier> list = new ArrayList<>();
         try {
@@ -154,37 +156,77 @@ public class RoomDAO {
         }
         return list;
     }
-    
-    
-    
-    
-    
-    public List<Room> getProductsWithPagging(int page, int PAGE_SIZE) {
-        List<Room> list = new ArrayList<>();
+
+    public List<BillDetail> getAllBillDetail() {
+        List<BillDetail> list = new ArrayList<>();
         try {
-            String sql = "select *  from Room order by id\n"
-                    + "offset (?-1)*? row fetch next ? rows only";
+            String sql = "select * from BillDetail";
             Connection conn = new DBContext().getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1, page);
-            ps.setInt(2, PAGE_SIZE);
-            ps.setInt(3, PAGE_SIZE);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Room product = Room.builder()
+                BillDetail bd = BillDetail.builder()
                         .id(rs.getInt(1))
-                        .name(rs.getString(2))
-                        .duration(rs.getInt(3))
-                        .price(rs.getDouble(4))
-                        .description(rs.getString(5))
-                        .imageUrl(rs.getString(6))
-                        .createdDate(rs.getString(7))
-                        .categoryId(rs.getInt(8)).build();
-                list.add(product);
+                        .billId(rs.getInt(2))
+                        .roomName(rs.getString(3))
+                        .roomImage(rs.getString(4))
+                        .roomPrice(rs.getDouble(5))
+                        .duration(rs.getInt(6)).build();
+                list.add(bd);
             }
         } catch (Exception ex) {
             Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
     }
+
+    public List<Bill> getAllBill() {
+        List<Bill> list = new ArrayList<>();
+        try {
+            String sql = "select * from Bills";
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Bill b = Bill.builder()
+                        .id(rs.getInt(1))
+                        .accountId(rs.getInt(2))
+                        .totalPrice(rs.getDouble(3))
+                        .note(rs.getString(4))
+                        .createdDate(rs.getString(5))
+                        .admissierId(rs.getInt(6)).build();
+                list.add(b);
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(CategoryDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
+
+    public void createRoom(String name, int duration, double price, String description, String image_url, String created_date, int category_id) {
+        String query = "INSERT INTO [ManageBookingDorm].[dbo].[Room]\n"
+                + "           ([name]\n"
+                + "           ,[duration]\n"
+                + "           ,[price]\n"
+                + "           ,[description]\n"
+                + "           ,[image_url]\n"
+                + "           ,[created_date]\n"
+                + "           ,[category_id])\n"
+                + "     VALUES\n"
+                + "           (?,?,?,?,?,?,?)";
+        try {
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, name);
+            ps.setInt(2, duration);
+            ps.setDouble(3, price);
+            ps.setString(4, description);
+            ps.setString(5, image_url);
+            ps.setString(6, created_date);
+            ps.setInt(7, category_id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
 }
