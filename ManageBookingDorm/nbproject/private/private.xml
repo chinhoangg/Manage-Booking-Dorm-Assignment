@@ -9,7 +9,6 @@
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/home.jsp</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/FilterCategoryController.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/LogoutController.java</file>
-            <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/UpdateRoomDurationController.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/tksquote.jsp</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/DAO/CategoryDAO.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/thanks.jsp</file>
@@ -20,7 +19,6 @@
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/service.jsp</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/SearchController.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/AddRoomComtroller.java</file>
-            <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/DAO/RoomDAO.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/filter/AunthenticationFilter.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/carts.jsp</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/DeleteRoomController.java</file>

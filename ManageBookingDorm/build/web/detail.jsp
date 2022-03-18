@@ -44,8 +44,8 @@
                         </div>
                         <p class="lead">${product.description}</p>
                         <div class="d-flex">
-                            <a href="add-to-cart?productId=${product.id}" class="btn btn-outline-success flex-shrink-0 ms-2" type="button">
-                                <i class="bi-cart-fill me-1"></i>
+                            <a href="add-to-cart?productId=${product.id}" class="btn btn-outline-danger flex-shrink-0 ms-2" type="button">
+                                <i class="me-1"></i>
                                 Booking now
                             </a>
                         </div>

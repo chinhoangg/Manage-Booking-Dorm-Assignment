@@ -24,7 +24,7 @@
     <body>
         <%@include file="components/navBarComponent.jsp" %>
         <h1 style="text-align: center">Update new room in the DormBOO.</h1><br>
-        <form action="http://localhost:8080/ManageBookingDorm/service" method="post">
+        <form action="createroom" method="POST">
             <table class="table" style="margin-left: 70px"  >
                 <tr>
                     <td>Name:</td>
@@ -63,13 +63,17 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>CategoryID:</td>
+                    <td>Type Room:</td>
                     <td>
-                        <input type="text" name="cate" size="100px">
+                        <select name = "cate">
+                            <c:forEach items="${listCategories}" var="c">
+                                <option value="${c.id}">${c.name}</option>
+                            </c:forEach>
                     </td>
+                    </select>
                 </tr>
                 <tr>
-                    <td><button type="submit">Add Room</button></td>
+                    <td><button type="submit"  class="btn btn-primary py-2 top-0 end-0 mt-2 ">Add Room</button></td>
                 </tr>
             </table>
         </form>

@@ -5,13 +5,17 @@
  */
 package controller;
 
+import DAO.CategoryDAO;
 import DAO.RoomDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.Category;
 
 /**
  *
@@ -57,6 +61,8 @@ public class AddRoomComtroller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        List<Category> listCategories = new CategoryDAO().getAllCategories();
+        request.setAttribute("listCategories", listCategories);
         request.getRequestDispatcher("../createroom.jsp").forward(request, response);
     }
 
@@ -72,19 +78,15 @@ public class AddRoomComtroller extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String sname = request.getParameter("name");
-        String duration = request.getParameter("duration");
-        String price = request.getParameter("price");
+        String sduration = request.getParameter("duration");
+        String sprice = request.getParameter("price");
         String sdescription = request.getParameter("description");
         String simage = request.getParameter("image");
         String sdate = request.getParameter("date");
-        String cate = request.getParameter("cate");
+        String scate = request.getParameter("cate");
 
-        int sduration = Integer.parseInt(duration);
-        double sprice = Double.parseDouble(duration);
-        int scate = Integer.parseInt(cate);
-        
         RoomDAO roomDAO = new RoomDAO();
-        roomDAO.createRoom(sname, sduration, sprice, sdescription, simage, cate, scate);
+        roomDAO.createRoom(sname, sduration, sprice, sdescription, simage, sdate, scate);
         response.sendRedirect("http://localhost:8080/ManageBookingDorm/service");
     }
 

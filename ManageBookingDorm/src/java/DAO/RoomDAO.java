@@ -203,7 +203,7 @@ public class RoomDAO {
         return list;
     }
 
-    public void createRoom(String name, int duration, double price, String description, String image_url, String created_date, int category_id) {
+    public void createRoom(String name, String duration, String price, String description, String image_url, String created_date, String category_id) {
         String query = "INSERT INTO [ManageBookingDorm].[dbo].[Room]\n"
                 + "           ([name]\n"
                 + "           ,[duration]\n"
@@ -218,15 +218,15 @@ public class RoomDAO {
             Connection conn = new DBContext().getConnection();
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, name);
-            ps.setInt(2, duration);
-            ps.setDouble(3, price);
+            ps.setString(2, duration);
+            ps.setString(3, price);
             ps.setString(4, description);
             ps.setString(5, image_url);
             ps.setString(6, created_date);
-            ps.setInt(7, category_id);
+            ps.setString(7, category_id);
             ps.executeUpdate();
         } catch (Exception e) {
         }
     }
-
+    
 }
