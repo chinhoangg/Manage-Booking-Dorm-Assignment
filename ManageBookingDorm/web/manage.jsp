@@ -38,16 +38,13 @@
                     <tr>
                         <td>${P.id}</td>
                         <td>${P.name}</td>
-                        <td>${P.price}</td>
+                        <td>${P.price} $</td>
                         <td style="width: 500px">${P.description}</td>
                         <td>
-                            <a href="delete" class="tm-product-delete-link">
-                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                            </a>
+                            <a href="#" onclick="showMess(${P.id})" class="far fa-trash-alt tm-product-delete-icon"></a>
                         </td>
                         <td>
-                            <a href="delete" class="fa fa-plus w-30px m-t-5">
-                            </a>
+                            <a href="update?id=${P.id}" class="bi bi-arrow-up-circle-fill"></a>
                         </td>
                     </c:forEach>
                 </tr>
@@ -55,4 +52,12 @@
         </form>
         <%@include file="components/footerComponent.jsp" %>
     </body>
+    <script>
+        function showMess(id){
+            var option = confirm('Really want to delete ???');
+            if(option === true){
+                window.location.href = 'delete?sid='+id;
+            } 
+        }   
+    </script>
 </html>

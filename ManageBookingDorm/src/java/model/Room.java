@@ -24,4 +24,17 @@ public class Room {
     private String imageUrl;
     private String createdDate;
     private int categoryId;
+
+    public Room(int id, String name, int duration, double price, String description, String imageUrl, String createdDate, int categoryId) {
+        this.id = id;
+        this.name = name;
+        this.duration = duration;
+        this.price = price;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.createdDate = createdDate;
+        this.categoryId = categoryId;
+    }
+    
+    
 }

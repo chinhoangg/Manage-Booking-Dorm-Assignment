@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import model.Admissier;
 import model.Bill;
 import model.BillDetail;
+import model.Category;
 import model.Room;
 
 /**
@@ -228,5 +229,80 @@ public class RoomDAO {
         } catch (Exception e) {
         }
     }
+
+    public void deleteRoom(String id) {
+        String query = "delete from Room where id = ?";
+        try {
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+    public Room getRoomByID(String id) {
+        String query = "select * from Room where id = ?";
+        try {
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Room(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getInt(3),
+                        rs.getDouble(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getInt(8));
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
     
+    public Category getCateByID(String id) {
+        String query = "select * from Category where id = ?";
+        try {
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Category(rs.getInt(1),
+                        rs.getString(2));
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    public void updateRoom(String id, String name, String duration, String price, String description, String imageUrl, String createdDate, String categoryId) {
+        String query = "UPDATE [ManageBookingDorm].[dbo].[Room]\n"
+                + "   SET [name] = ?\n"
+                + "      ,[duration] = ?\n"
+                + "      ,[price] = ?\n"
+                + "      ,[description] = ?\n"
+                + "      ,[image_url] = ?\n"
+                + "      ,[created_date] = ?\n"
+                + "      ,[category_id] = ?\n"
+                + " WHERE id = ?";
+        try {
+            Connection conn = new DBContext().getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, name);
+            ps.setString(2, duration);
+            ps.setString(3, price);
+            ps.setString(4, description);
+            ps.setString(5, imageUrl);
+            ps.setString(6, createdDate);
+            ps.setString(7, categoryId);
+            ps.setString(8, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
 }

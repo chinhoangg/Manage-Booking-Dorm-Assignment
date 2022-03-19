@@ -5,23 +5,19 @@
  */
 package controller;
 
-import DAO.CategoryDAO;
 import DAO.RoomDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Category;
 
 /**
  *
  * @author chinhoag
  */
-public class AddRoomComtroller extends HttpServlet {
+public class DeleteServiceController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +36,10 @@ public class AddRoomComtroller extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddRoomComtroller</title>");            
+            out.println("<title>Servlet DeleteServiceController</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddRoomComtroller at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet DeleteServiceController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,9 +57,10 @@ public class AddRoomComtroller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<Category> listCategories = new CategoryDAO().getAllCategories();
-        request.setAttribute("listCategories", listCategories);
-        request.getRequestDispatcher("../createroom.jsp").forward(request, response);
+        String id = request.getParameter("sid");
+        RoomDAO dao = new RoomDAO();
+        dao.deleteRoom(id);
+        response.sendRedirect("http://localhost:8080/ManageBookingDorm/admin/managerr");
     }
 
     /**
@@ -77,17 +74,7 @@ public class AddRoomComtroller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String sname = request.getParameter("name");
-        String sduration = request.getParameter("duration");
-        String sprice = request.getParameter("price");
-        String sdescription = request.getParameter("description");
-        String simage = request.getParameter("image");
-        String sdate = request.getParameter("date");
-        String scate = request.getParameter("cate");
-
-        RoomDAO roomDAO = new RoomDAO();
-        roomDAO.createRoom(sname, sduration, sprice, sdescription, simage, sdate, scate);
-        response.sendRedirect("http://localhost:8080/ManageBookingDorm/admin/managerr");
+        processRequest(request, response);
     }
 
     /**

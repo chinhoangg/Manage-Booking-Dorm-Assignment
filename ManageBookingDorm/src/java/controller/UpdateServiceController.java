@@ -14,14 +14,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.Category;
+import model.Room;
 
 /**
  *
  * @author chinhoag
  */
-public class AddRoomComtroller extends HttpServlet {
+public class UpdateServiceController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +40,10 @@ public class AddRoomComtroller extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddRoomComtroller</title>");            
+            out.println("<title>Servlet UpdateServiceController</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddRoomComtroller at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UpdateServiceController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,10 +60,15 @@ public class AddRoomComtroller extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        List<Category> listCategories = new CategoryDAO().getAllCategories();
-        request.setAttribute("listCategories", listCategories);
-        request.getRequestDispatcher("../createroom.jsp").forward(request, response);
+            throws ServletException, IOException { 
+        String id = request.getParameter("id");
+        RoomDAO dao = new RoomDAO();
+        
+        Room s = dao.getRoomByID(id);
+        Category c = dao.getCateByID(id);
+        request.setAttribute("st", s);
+        request.setAttribute("ct", c);
+        request.getRequestDispatcher("../update.jsp").forward(request, response);
     }
 
     /**
@@ -77,6 +82,7 @@ public class AddRoomComtroller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String sid = request.getParameter("id");
         String sname = request.getParameter("name");
         String sduration = request.getParameter("duration");
         String sprice = request.getParameter("price");
@@ -84,9 +90,10 @@ public class AddRoomComtroller extends HttpServlet {
         String simage = request.getParameter("image");
         String sdate = request.getParameter("date");
         String scate = request.getParameter("cate");
-
-        RoomDAO roomDAO = new RoomDAO();
-        roomDAO.createRoom(sname, sduration, sprice, sdescription, simage, sdate, scate);
+        
+        
+        RoomDAO dao = new RoomDAO();
+        dao.updateRoom(sid, sname, sduration, sprice, sdescription, simage, sdate, scate);
         response.sendRedirect("http://localhost:8080/ManageBookingDorm/admin/managerr");
     }
 
