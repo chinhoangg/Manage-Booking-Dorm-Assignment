@@ -1,0 +1,30 @@
+SMAP
+manage_jsp.java
+JSP
+*S JSP
+*F
++ 0 manage.jsp
+manage.jsp
++ 1 navBarComponent.jsp
+components/navBarComponent.jsp
++ 2 footerComponent.jsp
+components/footerComponent.jsp
+*L
+5,21:66
+5#1,49:87
+54:136,3
+55,4:139
+58:410,7
+59:417
+59:444,8
+60:452,3
+61,2:455
+62,2:420
+63:475,7
+64,2:482
+65,2:424
+66,7:145
+25#0,151:151
+5#2,87:302
+175#0,4:389
+*E

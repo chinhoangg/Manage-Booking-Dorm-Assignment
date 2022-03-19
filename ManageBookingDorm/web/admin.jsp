@@ -42,6 +42,9 @@
                         <li class="d-flex no-block card-body border-top"> <i class="fa fa-plus w-30px m-t-5" style="margin-right: 10px"></i>
                             <div> <a href="createroom" class="m-b-0 font-medium p-0">Add new room to the DormBOO</a> <span class="text-muted">Update service.</span> </div>
                         </li>
+                        <li class="d-flex no-block card-body border-top"> <i class="fa fa-plus w-30px m-t-5" style="margin-right: 10px"></i>
+                            <div> <a href="managerr" class="m-b-0 font-medium p-0">Manager to the DormBOO</a> <span class="text-muted">Update service.</span> </div>
+                        </li>
                     </ul>
                 </div>
             </div>

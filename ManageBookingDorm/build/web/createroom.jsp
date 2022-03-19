@@ -25,7 +25,7 @@
         <%@include file="components/navBarComponent.jsp" %>
         <h1 style="text-align: center">Update new room in the DormBOO.</h1><br>
         <form action="createroom" method="POST">
-            <table class="table" style="margin-left: 70px"  >
+            <table class="table container">
                 <tr>
                     <td>Name:</td>
                     <td>
