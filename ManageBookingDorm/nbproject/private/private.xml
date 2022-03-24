@@ -10,9 +10,11 @@
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/manage.jsp</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/AddRoomComtroller.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/DAO/RoomDAO.java</file>
+            <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/admincheck2.jsp</file>
+            <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/AdminController2.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/HomeController.java</file>
             <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/ManageController2.java</file>
-            <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/web/update.jsp</file>
+            <file>file:/D:/GITHUB/Manage-Booking-Dorm-Assignment/ManageBookingDorm/src/java/controller/UpdateRoomDurationController.java</file>
         </group>
     </open-files>
 </project-private>
